@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能通知管理系统 - 现代UI设计</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* 卡片弹出动画 */
+        .card {
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* 增加放大效果 */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Container for the UI -->
+    <div class="container">
+        <!-- 客户会议通知 -->
+        <div class="card">
+            <span class="icon">📅</span>
+            <h3>客户会议通知</h3>
+            <p><strong>消息：</strong>今天下午 5:00 与客户 A 在会议室讨论广告策略</p>
+            <p><strong>发送人：</strong>张经理</p>
+            <p><strong>时间：</strong>3:48 PM</p>
+        </div>
+
+        <!-- 内部例会通知 -->
+        <div class="card">
+            <span class="icon">📧</span>
+            <h3>内部例会通知</h3>
+            <p><strong>消息：</strong>明天上午 9:00 市场部例行会议</p>
+            <p><strong>发送人：</strong>市场部主管</p>
+            <p><strong>时间：</strong>4:30 PM</p>
+        </div>
+
+        <!-- 财务报表提交通知 -->
+        <div class="card">
+            <span class="icon">📑</span>
+            <h3>财务报表提交通知</h3>
+            <p><strong>消息：</strong>请在本周五上午10:00 前提交上个月的营销支出报表</p>
+            <p><strong>发送人：</strong>财务部</p>
+            <p><strong>时间：</strong>10:00 AM</p>
+        </div>
+
+        <!-- 添加更多通知以增加内容并启用滚动 -->
+        <div class="card">
+            <span class="icon">🔔</span>
+            <h3>系统维护通知</h3>
+            <p><strong>消息：</strong>本周六上午 2:00 系统将进行例行维护，请提前保存您的工作。</p>
+            <p><strong>发送人：</strong>技术支持团队</p>
+            <p><strong>时间：</strong>11:30 AM</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">📢</span>
+            <h3>项目更新通知</h3>
+            <p><strong>消息：</strong>请于下周三之前提交您负责的项目更新报告。</p>
+            <p><strong>发送人：</strong>项目经理</p>
+            <p><strong>时间：</strong>8:15 AM</p>
+        </div>
+        
+        <div class="card">
+            <span class="icon">💼</span>
+            <h3>招聘通知</h3>
+            <p><strong>消息：</strong>公司正在招聘新市场营销专员，有兴趣的员工请于周五前提交申请。</p>
+            <p><strong>发送人：</strong>人力资源部</p>
+            <p><strong>时间：</strong>9:00 AM</p>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
